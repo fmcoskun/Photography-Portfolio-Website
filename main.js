@@ -62,6 +62,8 @@ var swiper = new Swiper(".mySwiper", {
 
 
   // CLOSE NAV MENU ON CLICK OF MENU LINK
-  nav.querySelectorAll('li a').forEach(navLink => {
-    navLink.addEventListener('click', closeNav);
-  })
+  if(document.body.clientWidth < 1024) {
+    nav.querySelectorAll('li a').forEach(navLink => {
+        navLink.addEventListener('click', closeNav);
+      })
+  }
