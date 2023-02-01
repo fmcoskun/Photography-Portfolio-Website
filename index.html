@@ -11,6 +11,10 @@
 
     <!-- ICONSCOUT CDN -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- SWIPERJS CDN  -->
+    <!-- https://codesandbox.io/s/95tjqp?file-index.html -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     
     <!-- CUSTOM STYLESHEET -->
     <link rel="stylesheet" href="./style.css">
@@ -19,7 +23,7 @@
 
     <nav>
         <div class="container nav_container">
-            <a href="index.html" class="nav_logo"><img src="./images/logo.png" alt="Nav Logo"</a>
+            <a href="index.html" class="nav_logo"><img src="./images/logo.png" alt="Nav Logo"></a>
             <ul class="nav_links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -35,6 +39,7 @@
             <button class="nav_toggle-btn" id="nav_toggle-close"><i class="uil uil-multiply"></i></button>
         </div> 
     </nav>
+
     <!--============================================= END OF NAV ================================================ -->
     
     <header>
@@ -57,13 +62,166 @@
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis aut asperiores perspiciatis sunt laboriosam accusamus optio. Voluptatibus, maiores dolorem incidunt alias sint, iusto officiis earum corporis quibusdam, aspernatur quis vitae!
                 </p>
-                <a href="mailto:tatariamurat@gmail.com" class="header_btn-md">Let's Talk</a>
+                <a href="mailto:fmcoskun@gmail.com" class="header_btn-md">Let's Talk</a>
             </div>
         </div>
     </header>
+    <div class="header_frames">
+        <div class="header_frame">
+            <img src="./images/frame1.jpg" alt="Header Frame One">
+        </div>
+        <div class="header_frame">
+            <img src="./images/frame2.jpg" alt="Header Frame Two">
+        </div>
+    </div>
+    <a href="mailto:fmcoskun@gmail.com" class="contact_btn header_btn">
+        <i class="uil uil-arrow-up-right"></i>
+        <p>CONTACT - SEND ME AN EMAIL</p>
+    </a>
+
+    <!--============================================= END OF HEADER ================================================ -->
+
+    <section id="about">
+        <div class="container about_container">
+            <h2 class="about_title">About<br/>Diana Ayi</h2>
+            <a href="mailto:fmcoskun@gmail.com" class="contact_btn about_btn">
+                <i class="uil uil-arrow-up-right"></i>
+                <p>CONTACT - SEND ME AN EMAIL</p>
+            </a>
+            <div class="about_left">
+                <div class="about_image">
+                    <div class="about_image-bg"></div>
+                    <div class="about_image-lg">
+                        <img src="./images/about.jpg" alt="About Diana Ayi">
+                    </div>
+                    <div class="about_image-sm">
+                        <img src="./images/about.jpg" alt="About Diana Ayi">
+                    </div>
+                </div>
+            </div>
+            <div class="about_right">
+                <div class="empty about_empty"></div>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam pariatur, magnam at obcaecati repudiandae
+                    aliquid porro odio accusantium aut assumenda dolor consectetur quaerat nam enim repellendus itaque. 
+                </p>
+                <p>
+                    Quibusdam, itaque similique saepe, obcaecati odit beatae incidunt magnam officiis possimus, ducimus 
+                    accusamus temporibus consequuntur modi exercitationem animi? Eaque nisi assumenda dolorum? Magnam?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nemo ullam hic ipsa non neque.
+                </p>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem repellat necessitatibus 
+                    deserunt harum nisi atque sint quos aspernatur nobis quas!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!--============================================= END OF ABOUT ================================================ -->
+
+    <section id="gallery">
+        <div class="container gallery_container swiper mySwiper">
+            <div class="gallery_head">
+                <h2 class="gallery_title">My Gallery</h2>
+                <div class="empty gallery_empty"></div>
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione fuga, facere nostrum quo magnam hic aperiam cupiditate necessitatibus,
+                perferendis illo quisquam, pariatur eius quibusdam veniam quam placeat ea accusamus commodi. Lorem ipsum dolor sit amet consectetur, 
+                adipisicing elit. Architecto vel ratione soluta ullam. Veniam, nulla pariatur. Error, odit! Impedit, nulla!
+            </p>
+            <div class="swiper-wrapper">
+                <article class="swiper-slide">
+                    <img src="./images/gallery1.jpg">
+                </article>
+                <article class="swiper-slide">
+                    <img src="./images/gallery2.jpg">
+                </article>
+                <article class="swiper-slide">
+                    <img src="./images/gallery3.jpg">
+                </article>
+                <article class="swiper-slide">
+                    <img src="./images/gallery4.jpg">
+                </article>
+                <article class="swiper-slide">
+                    <img src="./images/gallery5.jpg">
+                </article>
+                <article class="swiper-slide">
+                    <img src="./images/gallery6.jpg">
+                </article>
+                <article class="swiper-slide">
+                    <img src="./images/gallery7.jpg">
+                </article>
+                <article class="swiper-slide">
+                    <img src="./images/gallery8.jpg">
+                </article>
+                <article class="swiper-slide">
+                    <img src="./images/gallery9.jpg">
+                </article>
+                <article class="swiper-slide">
+                    <img src="./images/gallery10.jpg">
+                </article>
+                <article class="swiper-slide">
+                    <img src="./images/gallery11.jpg">
+                </article>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!--============================================= END OF GALLERY ================================================ -->
+
+    <section id="exhibitions">
+        <div class="container exhibitions_container">
+            <h2 class="exhibitions_title">Exhibitions</h2>
+            <div class="empty exhibitions_empty"></div>
+            <div class="exhibitions_head">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque error assumenda autem facere amet, vel ipsa maiores debitis,
+                    expedita sequi consequuntur modi veritatis molestiae ipsum itaque neque doloremque mollitia reiciendis. Deserunt in incidunt
+                    voluptatibus maxime molestiae ea, obcaecati reprehenderit! Nisi.
+                </p>
+                <a href="mailto:fmcoskun@gmail.com" class="contact_btn exhibitions_btn">
+                    <i class="uil uil-arrow-up-right"></i>
+                    <p>CONTACT - SEND ME AN EMAIL</p>
+                </a>
+            </div>
+            <div class="exhibitions_gallery">
+                <article><img src="./images/ev.jpg"></article>
+                <article><img src="./images/e1.jpg"></article>
+                <article><img src="./images/e2.jpg"></article>
+                <article><img src="./images/eh.jpg"></article>
+                <article><img src="./images/e3.jpg"></article>
+                <article><img src="./images/e4.jpg"></article>
+                <article><img src="./images/e5.jpg"></article>
+            </div>
+        </div>
+    </section>
+
+    <!--============================================= END OF EXHIBITION ================================================ -->
+
+    <footer>
+        <div class="container footer_container">
+            <div class="footer_head">
+                <h2 class="footer_title">fmcoskun@gmail.com</h2>
+                <a href="mailto:fmcoskun@gmail.com" class="footer_btn">
+                    <i class="uil uil-arrow-up-right"></i>
+                </a>
+            </div>
+            <ul class="footer_links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#exhibition">Exhibitions</a></li>
+            </ul>
+        </div>
+    </footer>
 
 
 
+    <!-- SWIPER JS CDN -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>
