@@ -67,3 +67,69 @@ var swiper = new Swiper(".mySwiper", {
         navLink.addEventListener('click', closeNav);
       })
   }
+
+
+// LIGHTBOX (GALLERY SECTION)
+const galleryImages = [...document.querySelectorAll('.mySwiper .swiper-slide img')];
+const lightbox = document.querySelector('#lightbox');
+const lightboxImg = lightbox.querySelector('img');
+let lightboxIndex = 0;
+
+const showLightboxImage = index => {
+  lightboxIndex = (index + galleryImages.length) % galleryImages.length;
+  lightboxImg.src = galleryImages[lightboxIndex].src;
+  lightboxImg.alt = galleryImages[lightboxIndex].alt;
+}
+
+galleryImages.forEach((img, index) => {
+  img.addEventListener('click', () => {
+    showLightboxImage(index);
+    lightbox.showModal();
+  });
+});
+
+lightbox.querySelector('.lightbox_prev').addEventListener('click', () => showLightboxImage(lightboxIndex - 1));
+lightbox.querySelector('.lightbox_next').addEventListener('click', () => showLightboxImage(lightboxIndex + 1));
+lightbox.querySelector('.lightbox_close').addEventListener('click', () => lightbox.close());
+
+// Close when clicking the dark backdrop (outside the image box)
+lightbox.addEventListener('click', event => {
+  if (event.target === lightbox) lightbox.close();
+});
+
+document.addEventListener('keydown', event => {
+  if (!lightbox.open) return;
+  if (event.key === 'ArrowLeft') showLightboxImage(lightboxIndex - 1);
+  if (event.key === 'ArrowRight') showLightboxImage(lightboxIndex + 1);
+});
+
+
+// CONTACT FORM (OPENS MODAL, SENDS VIA THE VISITOR'S MAIL CLIENT)
+const contactModal = document.querySelector('#contact_modal');
+const contactForm = contactModal.querySelector('form');
+const CONTACT_EMAIL = 'fmcoskun@gmail.com';
+
+document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+  // Keep the footer and nav email links as plain mailto links
+  if (link.classList.contains('footer_btn')) return;
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    contactModal.showModal();
+  });
+});
+
+contactModal.querySelector('.contact_close').addEventListener('click', () => contactModal.close());
+
+contactModal.addEventListener('click', event => {
+  if (event.target === contactModal) contactModal.close();
+});
+
+contactForm.addEventListener('submit', event => {
+  event.preventDefault();
+  const data = new FormData(contactForm);
+  const subject = encodeURIComponent(`Portfolio enquiry from ${data.get('name')}`);
+  const body = encodeURIComponent(`${data.get('message')}\n\n— ${data.get('name')} (${data.get('email')})`);
+  window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+  contactForm.reset();
+  contactModal.close();
+});

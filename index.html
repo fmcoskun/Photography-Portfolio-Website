@@ -69,10 +69,10 @@
     </header>
     <div class="header_frames">
         <div class="header_frame">
-            <img src="./images/frame1.jpg" alt="Header Frame One">
+            <img src="./images/frame1.jpg" alt="Header Frame One" loading="lazy" decoding="async">
         </div>
         <div class="header_frame">
-            <img src="./images/frame2.jpg" alt="Header Frame Two">
+            <img src="./images/frame2.jpg" alt="Header Frame Two" loading="lazy" decoding="async">
         </div>
     </div>
     <a href="mailto:fmcoskun@gmail.com" class="contact_btn header_btn">
@@ -93,10 +93,10 @@
                 <div class="about_image">
                     <div class="about_image-bg"></div>
                     <div class="about_image-lg">
-                        <img src="./images/about.jpg" alt="About Diana Ayi">
+                        <img src="./images/about.jpg" alt="About Diana Ayi" loading="lazy" decoding="async">
                     </div>
                     <div class="about_image-sm">
-                        <img src="./images/about.jpg" alt="About Diana Ayi">
+                        <img src="./images/about.jpg" alt="About Diana Ayi" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -134,37 +134,37 @@
             </p>
             <div class="swiper-wrapper">
                 <article class="swiper-slide">
-                    <img src="./images/gallery1.jpg">
+                    <img src="./images/gallery1.jpg" loading="lazy" decoding="async">
                 </article>
                 <article class="swiper-slide">
-                    <img src="./images/gallery2.jpg">
+                    <img src="./images/gallery2.jpg" loading="lazy" decoding="async">
                 </article>
                 <article class="swiper-slide">
-                    <img src="./images/gallery3.jpg">
+                    <img src="./images/gallery3.jpg" loading="lazy" decoding="async">
                 </article>
                 <article class="swiper-slide">
-                    <img src="./images/gallery4.jpg">
+                    <img src="./images/gallery4.jpg" loading="lazy" decoding="async">
                 </article>
                 <article class="swiper-slide">
-                    <img src="./images/gallery5.jpg">
+                    <img src="./images/gallery5.jpg" loading="lazy" decoding="async">
                 </article>
                 <article class="swiper-slide">
-                    <img src="./images/gallery6.jpg">
+                    <img src="./images/gallery6.jpg" loading="lazy" decoding="async">
                 </article>
                 <article class="swiper-slide">
-                    <img src="./images/gallery7.jpg">
+                    <img src="./images/gallery7.jpg" loading="lazy" decoding="async">
                 </article>
                 <article class="swiper-slide">
-                    <img src="./images/gallery8.jpg">
+                    <img src="./images/gallery8.jpg" loading="lazy" decoding="async">
                 </article>
                 <article class="swiper-slide">
-                    <img src="./images/gallery9.jpg">
+                    <img src="./images/gallery9.jpg" loading="lazy" decoding="async">
                 </article>
                 <article class="swiper-slide">
-                    <img src="./images/gallery10.jpg">
+                    <img src="./images/gallery10.jpg" loading="lazy" decoding="async">
                 </article>
                 <article class="swiper-slide">
-                    <img src="./images/gallery11.jpg">
+                    <img src="./images/gallery11.jpg" loading="lazy" decoding="async">
                 </article>
             </div>
             <div class="swiper-pagination"></div>
@@ -189,13 +189,13 @@
                 </a>
             </div>
             <div class="exhibitions_gallery">
-                <article><img src="./images/ev.jpg"></article>
-                <article><img src="./images/e1.jpg"></article>
-                <article><img src="./images/e2.jpg"></article>
-                <article><img src="./images/eh.jpg"></article>
-                <article><img src="./images/e3.jpg"></article>
-                <article><img src="./images/e4.jpg"></article>
-                <article><img src="./images/e5.jpg"></article>
+                <article><img src="./images/ev.jpg" loading="lazy" decoding="async"></article>
+                <article><img src="./images/e1.jpg" loading="lazy" decoding="async"></article>
+                <article><img src="./images/e2.jpg" loading="lazy" decoding="async"></article>
+                <article><img src="./images/eh.jpg" loading="lazy" decoding="async"></article>
+                <article><img src="./images/e3.jpg" loading="lazy" decoding="async"></article>
+                <article><img src="./images/e4.jpg" loading="lazy" decoding="async"></article>
+                <article><img src="./images/e5.jpg" loading="lazy" decoding="async"></article>
             </div>
         </div>
     </section>
@@ -220,6 +220,38 @@
     </footer>
 
 
+
+    <!-- LIGHTBOX (opened from the gallery) -->
+    <dialog id="lightbox" class="lightbox">
+        <button type="button" class="lightbox_close" aria-label="Close"><i class="uil uil-multiply"></i></button>
+        <button type="button" class="lightbox_prev" aria-label="Previous image"><i class="uil uil-angle-left"></i></button>
+        <img src="" alt="">
+        <button type="button" class="lightbox_next" aria-label="Next image"><i class="uil uil-angle-right"></i></button>
+    </dialog>
+
+    <!-- CONTACT FORM (opened by the "Contact" buttons) -->
+    <dialog id="contact_modal" class="contact_modal">
+        <div class="contact_modal-box">
+            <button type="button" class="contact_close" aria-label="Close"><i class="uil uil-multiply"></i></button>
+            <h2>Send me a message</h2>
+            <form>
+                <label>
+                    Name
+                    <input type="text" name="name" required>
+                </label>
+                <label>
+                    Email
+                    <input type="email" name="email" required>
+                </label>
+                <label>
+                    Message
+                    <textarea name="message" rows="5" required></textarea>
+                </label>
+                <button type="submit" class="contact_submit">Send</button>
+            </form>
+            <p class="contact_modal-note">This opens your mail app with the message ready to send.</p>
+        </div>
+    </dialog>
 
     <!-- SWIPER JS CDN -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
